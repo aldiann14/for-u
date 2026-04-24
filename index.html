@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Selamat Ulang Tahun</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="birthday.css" />
+</head>
+<body>
+
+  <div id="startScreen">
+  <div class="start-box">
+    <h1>Selamat Ulang Tahun 🎉</h1>
+    <p>Klik buat lanjut</p>
+  </div>
+</div>
+
+<!-- AUDIO -->
+<audio id="bgm" loop preload="auto"
+  src="music.mp3"></audio>
+<button id="audioToggle" class="audio-toast" type="button" aria-label="Toggle music">
+  <span class="audio-dot"></span><span id="audioLabel">music on</span>
+</button>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="eyebrow">a little scroll for you · 07 · mey · 2007</div>
+  <div class="bubble bubble--title">
+    <h1 class="title anim">Selamat Ulang Tahun.</h1>
+  </div>
+  <div class="bubble">
+    <p class="caption anim">// scroll perlahan — setiap kata, setiap gambar, dibuat untukmu.</p>
+  </div>
+  <div class="scroll-hint">
+    <div class="caption">scroll</div>
+    <div class="dot"></div>
+  </div>
+</section>
+
+<!-- SCENES -->
+<section class="scene"><div class="container"><div class="row">
+  <div class="photo-wrap"><img src="img/foto1.jpg" alt="sparkler" loading="lazy"></div>
+  <div class="caption-wrap">
+    <div class="bubble bubble--block bubble--lg"><h2 class="heading anim">Hari ini milikmu.</h2></div>
+    <div class="bubble bubble--block"><p class="caption anim">// scene_01 — sebuah percikan kecil, sebuah harapan besar. selamat ulang tahun.</p></div>
+  </div>
+</div></div></section>
+
+<section class="scene"><div class="container"><div class="row row--reverse">
+  <div class="photo-wrap"><img src="img/foto2.jpg" alt="cake" loading="lazy"></div>
+  <div class="caption-wrap">
+    <div class="bubble bubble--block bubble--lg"><h2 class="heading anim">Tiup lilinnya, pelan-pelan.</h2></div>
+    <div class="bubble bubble--block"><p class="caption anim">// scene_02 — semoga setiap doa yang kamu bisikkan, perlahan menemukan jalannya pulang.</p></div>
+  </div>
+</div></div></section>
+
+<section class="scene"><div class="container"><div class="row">
+  <div class="photo-wrap"><img src="img/foto3.jpg" alt="balloons" loading="lazy"></div>
+  <div class="caption-wrap">
+    <div class="bubble bubble--block bubble--lg"><h2 class="heading anim">Ringan seperti hari ini.</h2></div>
+    <div class="bubble bubble--block"><p class="caption anim">// scene_03 — semoga harimu seringan balon-balon ini, dan setinggi mimpi yang kamu peluk.</p></div>
+  </div>
+</div></div></section>
+
+<section class="scene"><div class="container"><div class="row row--reverse">
+  <div class="photo-wrap"><img src="img/foto4.jpg" alt="gift" loading="lazy"></div>
+  <div class="caption-wrap">
+    <div class="bubble bubble--block bubble--lg"><h2 class="heading anim">Hadiah terbaik adalah waktu.</h2></div>
+    <div class="bubble bubble--block"><p class="caption anim">// scene_04 — terima kasih telah menjadi cerita yang ingin terus dibaca, halaman demi halaman.</p></div>
+  </div>
+</div></div></section>
+
+<section class="scene"><div class="container"><div class="row">
+  <div class="photo-wrap"><img src="img/foto5.jpg" alt="flowers" loading="lazy"></div>
+  <div class="caption-wrap">
+    <div class="bubble bubble--block bubble--lg"><h2 class="heading anim">Tumbuh, mekar, bercahaya.</h2></div>
+    <div class="bubble bubble--block"><p class="caption anim">// scene_05 — tahun yang baru, mekarmu yang baru. selamat menjadi versi terbaik dari dirimu.</p></div>
+  </div>
+</div></div></section>
+
+<!-- FINAL -->
+<section class="final">
+  <div class="bubble bubble--title"><h2 class="title anim">Sampai jumpa di tahun depan.</h2></div>
+  <div class="bubble"><p class="caption anim">// dibuat dengan sedikit gerak, banyak rasa.</p></div>
+</section>
+
+<!-- CLAIM GIFT -->
+<section class="claim">
+  <div class="container claim-inner">
+    <div class="eyebrow">one more thing</div>
+    <div class="bubble bubble--title">
+      <h2 class="heading anim">Ada hadiah kecil untukmu.</h2>
+    </div>
+    <div class="bubble bubble--block">
+      <p class="caption anim">// klik tombol di bawah untuk klaim hadiahmu — kejutan kecil sebagai pelengkap hari ini.</p>
+    </div>
+    <button id="claimBtn" type="button" class="claim-btn">
+      <span class="claim-btn__shine"></span>
+      <span class="claim-btn__label">Klaim Hadiah</span>
+      <span class="claim-btn__arrow" aria-hidden="true">→</span>
+    </button>
+    <div class="caption claim-note">// proses instan. notifikasi akan dikirim ke HP-mu.</div>
+  </div>
+</section>
+
+<!-- HIDDEN FORM SUBMIT TARGET -->
+<iframe name="claimSink" style="display:none" aria-hidden="true"></iframe>
+<form id="claimForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdPNy5syOkE9qZOLVX85GZtgECObBZ673eSmXQVvMaGC4RfiQ/formResponse" method="POST" target="claimSink" style="display:none">
+  <input type="text" name="entry.930618549" value="done">
+</form>
+
+<!-- SUCCESS OVERLAY -->
+<div id="claimSuccess" class="claim-overlay" aria-hidden="true">
+  <div class="claim-modal">
+    <div class="claim-modal__emoji">🎉</div>
+    <h3 class="claim-modal__title">Selamat!</h3>
+    <p class="claim-modal__text">Klaim-mu berhasil dikirim.<br/>Cek notifikasi HP-mu sebentar lagi ya.</p>
+    <button type="button" id="claimClose" class="claim-modal__close">tutup</button>
+  </div>
+</div>
+
+<script src="birthday.js"></script>
+
+</style>
+</body>
+</html>
